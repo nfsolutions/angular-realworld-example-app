@@ -8,13 +8,20 @@ describe('Conduit App E2E Test Suite', () => {
 		beforeAll(() => {
 			homePage.getPage();
 		});
-		
+
 		it('should have right title', () => {
 			homePage.getPageTitle()
 				.then((title: string) => {
 					expect(title).toEqual('Conduit');
 				});
 		})
-		
+
+    it('should have right URL', () => {
+      homePage.getCurrentURL()
+        .then((url: string) => {
+          expect(url).toEqual('http://localhost:49152/#/');
+        });
+    })
+
 	})
 })

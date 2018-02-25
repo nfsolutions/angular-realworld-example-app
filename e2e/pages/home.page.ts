@@ -9,4 +9,8 @@ export class HomePage {
 		return browser.getTitle();
 	}
 
+	getCurrentURL() {
+	  return browser.getCurrentUrl();
+  }
+
 }
